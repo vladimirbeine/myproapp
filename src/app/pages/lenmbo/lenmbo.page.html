@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button fill="outline" expand="block" color="primary" size="large" shape="round" strong="true">$ 895.25</ion-button>
+      <ion-button fill="outline" expand="block" color="primary" size="large" shape="round" strong="true">
+        <ion-icon name="person-add-outline"></ion-icon> 2
+      </ion-button>
+      <ion-button fill="clear" expand="block" color="primary" size="large" shape="round" strong="true">
+        <ion-icon slot="icon-only" name="reload-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-item>
+      <ion-icon name="person-circle-outline" slot="start"></ion-icon>
+      <ion-label>@vladimirbeine</ion-label>
+      <ion-label>Member since 2022</ion-label>
+      <ion-button routerDirection="/tabs/profile" fill="solid" color="secondary" slot="end">
+        <ion-icon name="grid-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-item>
+  
+    <ion-card-content>
+      Keep close to Nature's heart... and break clear away, once in awhile,
+      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button (click)="showBanner()" expand="full">Show Banner</ion-button>
+  <ion-button (click)="hideBanner()" expand="full">Show Banner</ion-button>
+
+  <ion-button (click)="showInterstitial()" expand="full">Show Banner</ion-button>
+  <ion-button (click)="showRewardVideo()" expand="full">Show Banner</ion-button>
+
+</ion-content>

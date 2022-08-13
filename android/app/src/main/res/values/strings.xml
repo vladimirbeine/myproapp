@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">myapp</string>
+    <string name="title_activity_main">myapp</string>
+    <string name="package_name">com.vladimirbeine.myapp</string>
+    <string name="custom_url_scheme">com.vladimirbeine.myapp</string>
+    <string name="admob_app_id">ca-app-pub-9277249519424818~8524617384</string>
+</resources>

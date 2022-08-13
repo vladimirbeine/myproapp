@@ -1,0 +1,62 @@
+<ion-content>
+
+    <div id="header">
+      <div id="app-bar">
+        <ion-buttons slot="start">
+          <ion-button routerLink="/tabs/home" fill="clear">
+            <ion-icon name="arrow-back-outline" color="light"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </div>
+      
+      <div id="logo">
+        <img src="../../../assets/images/tips.jpg" alt="Logo Icon">
+      </div>
+  
+      <h1>Sign up</h1>
+      <p>Sign up to discover amazing things around you.</p>
+  
+      <div id="wrapper">
+        <ion-card class="form-wrapper">
+          <ion-card-content>
+            <form [formGroup]="credentials" (ngSubmit)="signup()">
+              <ion-item>
+                <ion-icon name="mail"></ion-icon>
+                <ion-input type="email" placeholder="Your email" formControlName="email"></ion-input>
+                <ion-note slot="error" *ngIf="(email.dirty || email.touched) && email.errors">Email is ivalid</ion-note>
+              </ion-item>
+              <ion-item>
+                <ion-icon name="lock-closed"></ion-icon>
+                <ion-input type="password" placeholder="Your password" formControlName="password"></ion-input>
+                <ion-note slot="error" *ngIf="(password.dirty || password.touched) && password.errors">Password too short</ion-note>
+              </ion-item>
+              <ion-button expand="block" type="submit">Create account</ion-button>
+            </form>
+          </ion-card-content>
+        </ion-card>
+  
+        
+        <div id="line-text">
+          <span id="line"></span>
+          <span id="text">Or connect using</span>
+        </div>
+  
+        <div id="socials">
+            <ion-button id="fb-btn">
+                <ion-icon name="logo-facebook"></ion-icon>
+            </ion-button>
+            <ion-button id="tw-btn">
+                <ion-icon name="logo-twitter"></ion-icon>
+            </ion-button>
+            <ion-button id="gg-btn">
+                <ion-icon name="logo-google"></ion-icon>
+            </ion-button>
+            <ion-button id="ph-btn">
+                <ion-icon name="call-outline"></ion-icon>
+            </ion-button>
+        </div>
+      </div>
+    </div>
+  
+</ion-content>
+  

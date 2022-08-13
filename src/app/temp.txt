@@ -1,0 +1,31 @@
+
+    <form [formGroup]="credentials" (ngSubmit)="signup()">
+
+        <ion-item fill="solid">
+            <ion-input type="email" placeholder="Your email" formControlName="email"></ion-input>
+            <ion-note slot="error" *ngIf="(email.dirty || email.touched) && email.errors">Email is ivalid</ion-note>
+        </ion-item>
+        <ion-item fill="solid">
+            <ion-input type="password" placeholder="Your password" formControlName="password"></ion-input>
+            <ion-note slot="error" *ngIf="(password.dirty || password.touched) && password.errors">Password too short</ion-note>
+        </ion-item>
+
+        <ion-button expand="full" type="submit">Create an account</ion-button>
+
+    </form>
+
+    
+  <form [formGroup]="credentials" (ngSubmit)="login()">
+
+      <ion-item fill="solid">
+          <ion-input type="email" placeholder="Your email" formControlName="email"></ion-input>
+          <ion-note slot="error" *ngIf="(email.dirty || email.touched) && email.errors">Email is ivalid</ion-note>
+      </ion-item>
+      <ion-item fill="solid">
+          <ion-input type="password" placeholder="Your password" formControlName="password"></ion-input>
+          <ion-note slot="error" *ngIf="(password.dirty || password.touched) && password.errors">Password too short</ion-note>
+      </ion-item>
+
+      <ion-button expand="full" type="submit">Login</ion-button>
+
+  </form>

@@ -1,0 +1,6 @@
+{
+	"appId": "com.vladimirbeine.myapp",
+	"appName": "myapp",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

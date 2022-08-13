@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+    <ion-button fill="clear" slot="end">
+      <ion-icon slot="icon-only" name="ellipsis-vertical-outline"></ion-icon>
+    </ion-button>
+    <ion-title>Acceuil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <swiper
+      pager="true"
+      [initialSlide]="0"
+      [autoplay]="true"
+      [loop]="true"
+      [effect]="flip"
+      [config]="config"
+      (swiper)="onSwiper($event)"
+      (slideChange)="onSlideChange()"
+    >
+      <ng-template swiperSlide>
+        <img src="../../../assets/images/coaching.jpg" alt="">
+      </ng-template>
+      <ng-template swiperSlide>
+        <img src="../../../assets/images/discount.jpg" alt="">
+      </ng-template>
+      <ng-template swiperSlide>
+        <img src="../../../assets/images/discount.jpg" alt="">
+      </ng-template>
+      <ng-template swiperSlide>
+        <img src="../../../assets/images/online-course.jpg" alt="">
+      </ng-template>
+      <ng-template swiperSlide>
+        <img src="../../../assets/images/tips.jpg" alt="">
+      </ng-template>
+      <ng-template swiperSlide>
+        <img src="../../../assets/images/promotion.jpg" alt="">
+      </ng-template>
+    </swiper>
+
+</ion-content>

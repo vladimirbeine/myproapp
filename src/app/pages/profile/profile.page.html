@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button (click)="toggleTheme($event)" slot="end" color="primary" fill="clear">
+      <ion-icon name="toggle-outline"></ion-icon>
+    </ion-button>
+    <ion-button slot="end" color="primary" fill="clear">
+      <ion-icon slot="icon-only" name="ellipsis-vertical-outline"></ion-icon>
+    </ion-button>
+    <ion-title>Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="preview">
+    <ion-avatar (click)="changeImage()">
+      <img *ngIf="profile?.imageUrl; else placeholder_avatar" [src]="profile.imageUrl" alt="Profile picture" />
+      <ng-template #placeholder_avatar>
+        <div class="fallback">
+          <p>Select avatar</p>
+        </div>
+      </ng-template>
+    </ion-avatar>
+  </div>
+
+  <ion-button routerLink="/login" expand="block" fill="clear" shape="round">Login</ion-button>
+  <ion-button routerLink="/signup" expand="block" fill="clear" shape="round">Signup</ion-button>
+  <ion-button (click)="logOutUser()" expand="block" fill="clear" shape="round">Logout</ion-button>
+
+</ion-content>
